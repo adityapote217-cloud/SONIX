@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SONIX Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player-container">
+    <h1 class="logo">SONIX</h1>
+    
+    <!-- Playlist Section -->
+    <div class="playlist">
+      <h2>Playlists</h2>
+      <ul id="playlist-list">
+        <li onclick="loadPlaylist('favorites')">Favorites</li>
+        <li onclick="loadPlaylist('chill')">Chill Vibes</li>
+        <li onclick="loadPlaylist('workout')">Workout</li>
+      </ul>
+    </div>
+
+    <!-- Track Section -->
+    <div class="tracklist">
+      <h2>Tracks</h2>
+      <ul id="track-list"></ul>
+    </div>
+
+    <!-- Player Controls -->
+    <div class="controls">
+      <button onclick="prevTrack()">⏮</button>
+      <button onclick="togglePlay()">▶️ / ⏸</button>
+      <button onclick="nextTrack()">⏭</button>
+      <input type="file" id="fileInput" multiple accept="audio/*" onchange="addTracks(event)">
+    </div>
+
+    <audio id="audio-player" controls hidden></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
