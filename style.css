@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(145deg, #111, #333);
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.player-container {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(200,200,200,0.2);
+  width: 400px;
+  text-align: center;
+  transform: perspective(800px) rotateY(5deg);
+  transition: transform 0.5s ease;
+}
+
+.player-container:hover {
+  transform: perspective(800px) rotateY(0deg) scale(1.05);
+}
+
+.logo {
+  font-size: 2.5em;
+  color: #aaa;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.playlist, .tracklist {
+  margin: 15px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  background: #333;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #555;
+}
+
+.controls button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  background: #444;
+  color: #eee;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.2);
+  background: #666;
+}
